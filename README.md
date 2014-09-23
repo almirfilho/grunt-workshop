@@ -24,7 +24,7 @@ desenvolvimento front-end?
 
 Neste workshop serão abordados os conceitos e a importância da automatização de
 tarefas usando o task runner mais famoso e utilizado no mundo do front-end, o
-__GruntJS__. Como instalar, configurar, usar e integrar às suas ferramentas de
+__[GruntJS](http://gruntjs.com/)__. Como instalar, configurar, usar e integrar às suas ferramentas de
 build já existentes. Também serão abordadas as tarefas mais comuns e seus
 respectivos plugins.
 
