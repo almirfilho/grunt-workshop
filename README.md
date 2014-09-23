@@ -35,7 +35,7 @@ respectivos plugins.
 
 ### Pré-requisitos de sistema
 
-- Node.js
-- NPM
+- [Node.js](http://nodejs.org/)
+- [NPM](https://www.npmjs.org/)
 - Se for usuário Windows, também é necessário ter um programa de terminal
-instalado, como o PuTTY.
+instalado, como o [PuTTY](http://www.putty.org/).
