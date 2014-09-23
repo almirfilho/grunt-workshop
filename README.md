@@ -1,14 +1,17 @@
 # Grunt Workshop
 
-Workshop de [GruntJS](http://gruntjs.com) ministrado por
-[@almirfilho](https://github.com/almirfilho) e
-[@davidsonFellipe](https://github.com/davidsonfellipe) na Conferência W3C
+Workshop sobre [GruntJS](http://gruntjs.com) ministrado na Conferência W3C
 [Web.br 2014](http://conferenciaweb.w3c.br).
 
 O objetivo é simplesmente clonar este repositório, instalar o grunt com alguns
 de seus plug-ins mais utilizados e gradativamente ir incrementando o workflow
 com o auxílio dessas ferramentas.
 
+## Instrutores
+
+[![Almir Filho](https://avatars3.githubusercontent.com/u/532254?v=2&s=90)](https://github.com/almirfilho) | [![Davidson Fellipe](https://avatars0.githubusercontent.com/u/381179?v=2&s=90)](https://github.com/davidsonfellipe)
+--- | --- | --- | --- | --- | --- | ---
+[Almir Filho](https://github.com/almirfilho)<br>Globo.com | [Davidson Fellipe](https://github.com/davidsonfellipe)<br>Globo.com
 
 ## Por que automatizar?
 
