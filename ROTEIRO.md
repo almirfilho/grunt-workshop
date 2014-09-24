@@ -240,7 +240,7 @@ Mais detalhes em: [grunt-contrib-concat](https://github.com/gruntjs/grunt-contri
 
 ### grunt-uglify
 
-Esta task pode ser utilizada quando quisermos juntar todos os arquivos javascript em um único arquivo e ainda realizar o processo de __uglify__, que consiste em remover espaços desnecessários, reduzir nomes de váriveis locais, .
+Esta task pode ser utilizada quando quisermos juntar todos os arquivos javascript em um único arquivo e ainda realizar o processo de __uglify__, que consiste em remover espaços desnecessários, reduzir nomes de váriveis locais, além de outras pequenas otimizações.
 
 Instalação:
 
