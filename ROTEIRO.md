@@ -213,7 +213,30 @@ Mais detalhes em: [grunt-newer](https://github.com/tschaub/grunt-newer).
 
 ### grunt-concat
 
-(#daveEhDev)
+Queremos juntar todos os arquivos javascript em um único arquivo.
+
+Instalação:
+
+```bash
+$ npm install grunt-contrib-concat --save-dev
+```
+
+Configuração da task:
+```javascript
+grunt.initConfig({
+  concat: {
+    dist: {
+      src: ['src/scripts/*.js'],
+      dest: 'build/scripts/all.js',
+    },
+  }
+});
+
+grunt.loadNpmTasks('grunt-contrib-concat');
+```
+
+Mais detalhes em: [grunt-contrib-concat](https://github.com/gruntjs/grunt-contrib-concat).
+
 
 ### grunt-uglify
 
