@@ -39,6 +39,16 @@ module.exports = function(grunt) {
           'build/scripts/all.min.js': ['src/scripts/*.js']
         }
       }
+    },
+
+    connect: {
+      server: {
+        options: {
+          port: 8001,
+          base: 'build',
+          keepalive: true
+        }
+      }
     }
   });
 
@@ -48,4 +58,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-newer');
+  grunt.loadNpmTasks('grunt-contrib-connect');
 };

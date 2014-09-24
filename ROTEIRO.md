@@ -13,7 +13,7 @@ $ brew install node
 Windows / Mac Os X / Linux:
 Acessar [nodejs.org](http://nodejs.org/), fazer o download e instalar.
 
-Verificando instalações:
+__Verificando instalações:__
 
 ```bash
 $ node --version
@@ -22,13 +22,13 @@ $ npm --version
 
 ### 1.2 Grunt-CLI
 
-Instalar o grunt-cli pelo terminal:
+__Instalar o grunt-cli pelo terminal:__
 
 ```bash
 $ npm install grunt-cli
 ```
 
-Verificando instalação:
+__Verificando instalação:__
 
 ```bash
 $ grunt --version
@@ -53,7 +53,7 @@ Ou baixar o __.zip__ pelo Github.
 
 O que é o __package.json__ e como funciona?
 
-Instale o grunt localmente:
+__Instale o grunt localmente:__
 
 ```bash
 $ npm install grunt --save-dev
@@ -83,13 +83,13 @@ module.exports = function(grunt) {
 
 ### 5.1 grunt-contrib-copy
 
-Instalação:
+__Instalação:__
 
 ```bash
 $ npm install grunt-contrib-copy --save-dev
 ```
 
-Configuração da task:
+__Configuração da task:__
 
 ```javascript
 grunt.initConfig({
@@ -110,13 +110,14 @@ Mais detalhes em: [grunt-contrib-copy](https://github.com/gruntjs/grunt-contrib-
 
 ### 5.2 grunt-contrib-watch
 
-Instalação:
+__Instalação:__
 
 ```bash
 $ npm install grunt-contrib-watch --save-dev
 ```
 
-Configuração da task:
+__Configuração da task:__
+
 ```javascript
 grunt.initConfig({
   watch: {
@@ -134,13 +135,14 @@ Mais detalhes em: [grunt-contrib-watch](https://github.com/gruntjs/grunt-contrib
 
 Renomeie o arquivo __src/styles/custom.css__ para __src/styles/custom.less__.
 
-Instalação:
+__Instalação:__
 
 ```bash
 $ npm install grunt-contrib-less --save-dev
 ```
 
-Configuração da task:
+__Configuração da task:__
+
 ```javascript
 grunt.initConfig({
   less: {
@@ -189,13 +191,14 @@ watch: {
 Queremos evitar a execução de ações desnecessárias quando __qualquer arquivo__
 de uma determinada task for modificado.
 
-Instalação:
+__Instalação:__
 
 ```bash
 $ npm install grunt-newer --save-dev
 ```
 
-Configuração da task:
+__Configuração da task:__
+
 ```javascript
 grunt.initConfig({
   // ...
@@ -215,13 +218,14 @@ Mais detalhes em: [grunt-newer](https://github.com/tschaub/grunt-newer).
 
 Queremos juntar todos os arquivos javascript em um único arquivo.
 
-Instalação:
+__Instalação:__
 
 ```bash
 $ npm install grunt-contrib-concat --save-dev
 ```
 
-Configuração da task:
+__Configuração da task:__
+
 ```javascript
 grunt.initConfig({
   concat: {
@@ -240,15 +244,18 @@ Mais detalhes em: [grunt-contrib-concat](https://github.com/gruntjs/grunt-contri
 
 ### grunt-uglify
 
-Esta task pode ser utilizada quando quisermos juntar todos os arquivos javascript em um único arquivo e ainda realizar o processo de __uglify__, que consiste em remover espaços desnecessários, reduzir nomes de váriveis locais, .
+Esta task pode ser utilizada quando quisermos juntar todos os arquivos
+javascript em um único arquivo e ainda realizar o processo de __uglify__, que
+consiste em remover espaços desnecessários, reduzir nomes de váriveis locais.
 
-Instalação:
+__Instalação:__
 
 ```bash
 $ npm install grunt-contrib-uglify --save-dev
 ```
 
-Configuração da task:
+__Configuração da task:__
+
 ```javascript
 grunt.initConfig({
   uglify: {
@@ -276,7 +283,34 @@ Mais detalhes em: [grunt-contrib-uglify](https://github.com/gruntjs/grunt-contri
 
 ### grunt-connect
 
-(#almirOdev)
+Agora queremos que nossa aplicação rode em num servidor HTTP local.
+
+__Instalação:__
+
+```bash
+$ npm install grunt-contrib-connect --save-dev
+```
+
+__Configuração da task:__
+
+```javascript
+grunt.initConfig({
+  connect: {
+    server: {
+      options: {
+        port: 8001,
+        base: 'build',
+        keepalive: true
+      }
+    }
+  }
+});
+
+grunt.loadNpmTasks('grunt-contrib-connect');
+```
+
+Mais detalhes em: [grunt-contrib-connect](https://github.com/gruntjs/grunt-contrib-connect).
+
 
 ### grunt-concurrent
 
