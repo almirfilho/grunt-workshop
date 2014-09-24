@@ -240,7 +240,31 @@ Mais detalhes em: [grunt-contrib-concat](https://github.com/gruntjs/grunt-contri
 
 ### grunt-uglify
 
-(#daveEhDev)
+Esta task pode ser utilizada quando quisermos juntar todos os arquivos javascript em um único arquivo e ainda realizar o processo de __uglify__, que consiste em remover espaços desnecessários, reduzir nomes de váriveis locais, .
+
+Instalação:
+
+```bash
+$ npm install grunt-contrib-uglify --save-dev
+```
+
+Configuração da task:
+```javascript
+grunt.initConfig({
+  uglify: {
+    dist: {
+      files: {
+        'build/scripts/all.min.js': ['src/scripts/*.js']
+      }
+    }
+  }
+});
+
+grunt.loadNpmTasks('grunt-contrib-uglify');
+```
+
+Mais detalhes em: [grunt-contrib-uglify](https://github.com/gruntjs/grunt-contrib-uglify).
+
 
 ### grunt-htmlmin
 
