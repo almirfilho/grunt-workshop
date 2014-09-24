@@ -51,7 +51,7 @@ Ou baixar o __.zip__ pelo Github.
 
 ## 3. package.json e Grunt local
 
-_O que é o __package.json__ e como funciona?_
+O que é o __package.json__ e como funciona?
 
 Instale o grunt localmente:
 
@@ -229,14 +229,24 @@ Mais detalhes em: [grunt-newer](https://github.com/tschaub/grunt-newer).
 
 ### grunt-connect
 
-(almir)
+(#almirOdev)
 
 ### grunt-concurrent
 
-(almir)
+(#almirOdev)
 
-grunt-csslint
-grunt-jshint
+### grunt-csslint
 
-load-grunt-tasks
-load-grunt-config
+(#almirOdev)
+
+### grunt-jshint
+
+(#almirOdev)
+
+### load-grunt-tasks
+
+(#daveEhDev)
+
+### load-grunt-config
+
+(#daveEhDev)
