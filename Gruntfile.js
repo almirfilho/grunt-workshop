@@ -49,6 +49,15 @@ module.exports = function(grunt) {
           keepalive: true
         }
       }
+    },
+
+    concurrent: {
+      dev: {
+        tasks: ['watch', 'connect'],
+        options: {
+          logConcurrentOutput: true
+        }
+      }
     }
   });
 
@@ -59,4 +68,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-newer');
   grunt.loadNpmTasks('grunt-contrib-connect');
+  grunt.loadNpmTasks('grunt-concurrent');
 };

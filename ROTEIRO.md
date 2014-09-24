@@ -281,7 +281,7 @@ Mais detalhes em: [grunt-contrib-uglify](https://github.com/gruntjs/grunt-contri
 
 (#daveEhDev)
 
-### grunt-connect
+### grunt-contrib-connect
 
 Agora queremos que nossa aplicação rode em num servidor HTTP local.
 
@@ -314,7 +314,43 @@ Mais detalhes em: [grunt-contrib-connect](https://github.com/gruntjs/grunt-contr
 
 ### grunt-concurrent
 
-(#almirOdev)
+Queremos __servir__ nossa aplicação enquanto rodamos a task __watch__.
+Podemos utilizar este plug-in para rodar tasks em paralelo.
+
+__Instalação:__
+
+```bash
+$ npm install grunt-concurrent --save-dev
+```
+
+__Configuração da task:__
+
+```javascript
+grunt.initConfig({
+  concurrent: {
+    dev: ['watch', 'connect']
+  }
+});
+
+grunt.loadNpmTasks('grunt-concurrent');
+```
+
+__Para logar o output das tasks no terminal:__
+
+```javascript
+grunt.initConfig({
+  concurrent: {
+    dev: {
+      tasks: ['watch', 'connect'],
+      options: {
+        logConcurrentOutput: true
+      }
+    }
+  }
+});
+
+Mais detalhes em: [grunt-concurrent](https://github.com/sindresorhus/grunt-concurrent).
+
 
 ### grunt-csslint
 
