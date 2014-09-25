@@ -273,8 +273,8 @@ Mais detalhes em: [grunt-contrib-uglify](https://github.com/gruntjs/grunt-contri
 
 ### 5.7 grunt-htmlmin
 
-Esta task pode ser utilizada quando quisermos remover espaços desnecessários dos
-arquivos HTML, e preservando espaços úteis como nas tags <pre> e comentários condicionais.
+Esta task é utilizada quando queremos remover espaços desnecessários dos
+arquivos HTML, e preservar espaços úteis, como nas tags <pre> e comentários condicionais.
 
 __Instalação:__
 
