@@ -74,7 +74,22 @@ module.exports = function(grunt) {
             dest: 'build/'},
         ]
       }
+    },
+
+    imagemin: {
+      options: {
+        cache: false
+      },
+      dist: {
+        files: [{
+          expand: true,
+          cwd: 'src/images',
+          src: '{,*/}*.{png,jpg,jpeg}',
+          dest: 'build/images'
+        }]
+      }
     }
+
   });
 
   grunt.loadNpmTasks('grunt-contrib-copy');
@@ -86,4 +101,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-concurrent');
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
+  grunt.loadNpmTasks('grunt-contrib-imagemin');
 };
