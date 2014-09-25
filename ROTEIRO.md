@@ -332,9 +332,66 @@ watch: {
 
 Mais detalhes em: [grunt-contrib-htmlmin](https://github.com/gruntjs/grunt-contrib-htmlmin).
 
-### grunt-imagemin
+### 5.8 grunt-imagemin
 
-(#daveEhDev)
+Esta task é utilizada para otimizar imagens de diversos formatos, e essa compactação é
+realizada sem perda de qualidade.
+
+__Instalação:__
+
+```bash
+$ npm install grunt-contrib-imagemin --save-dev
+```
+
+__Configuração da task:__
+
+```javascript
+grunt.initConfig({
+  imagemin: {
+    options: {
+      cache: false
+    },
+    dist: {
+      files: [{
+        expand: true,
+        cwd: 'src/images',
+        src: '{,*/}*.{png,jpg,jpeg}',
+        dest: 'build/images'
+      }]
+    }
+  }
+};
+
+});
+
+grunt.loadNpmTasks('grunt-contrib-imagemin');
+```
+
+#### 5.7.1 Reconfig da task copy
+
+Queremos evitar que __imagens__ sejam copiadas para dentro de __build/__.
+
+```javascript
+copy: {
+  // ...
+  // src: ['**/*'],
+     src: ['**/*', '!styles/*.less', '!*.html', '!*.images'],
+  // ...
+});
+```
+
+#### 5.7.2 Reconfig da task watch
+
+```javascript
+watch: {
+  // ...
+  // tasks: ['copy']
+     tasks: ['newer:copy', 'newer:less', 'newer:htmlmin', 'newer:imagemin']
+  // ...
+}
+```
+
+Mais detalhes em: [grunt-contrib-imagemin](https://github.com/gruntjs/grunt-contrib-imagemin).
 
 ### grunt-contrib-connect
 
