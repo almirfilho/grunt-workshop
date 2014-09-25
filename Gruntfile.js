@@ -5,7 +5,7 @@ module.exports = function(grunt) {
       files: {
         expand: true,
         cwd: 'src/',
-        src: ['**/*', '!styles/*.less'],
+        src: ['**/*', '!styles/*.less', '!*.less', '!*.html'],
         dest: 'build/'
       }
     },
@@ -66,9 +66,13 @@ module.exports = function(grunt) {
           removeComments: true,
           collapseWhitespace: true
         },
-        files: {
-          'build/index.html': 'src/index.html'
-        }
+        files: [
+          {
+            expand: true,
+            cwd: 'src',
+            src: ['*.html'],
+            dest: 'build/'},
+        ]
       }
     }
   });
