@@ -186,7 +186,7 @@ watch: {
 }
 ```
 
-### grunt-newer
+### 5.4 grunt-newer
 
 Queremos evitar a execução de ações desnecessárias quando __qualquer arquivo__
 de uma determinada task for modificado.
@@ -214,7 +214,7 @@ grunt.loadNpmTasks('grunt-newer');
 
 Mais detalhes em: [grunt-newer](https://github.com/tschaub/grunt-newer).
 
-### grunt-concat
+### 5.5 grunt-concat
 
 Queremos juntar todos os arquivos javascript em um único arquivo.
 
@@ -242,7 +242,7 @@ grunt.loadNpmTasks('grunt-contrib-concat');
 Mais detalhes em: [grunt-contrib-concat](https://github.com/gruntjs/grunt-contrib-concat).
 
 
-### grunt-uglify
+### 5.6 grunt-uglify
 
 Esta task pode ser utilizada quando quisermos juntar todos os arquivos javascript em um único arquivo e ainda realizar o processo de __uglify__, que consiste em remover espaços desnecessários, reduzir nomes de váriveis locais, além de outras pequenas otimizações.
 
@@ -271,9 +271,66 @@ grunt.loadNpmTasks('grunt-contrib-uglify');
 Mais detalhes em: [grunt-contrib-uglify](https://github.com/gruntjs/grunt-contrib-uglify).
 
 
-### grunt-htmlmin
+### 5.7 grunt-htmlmin
 
-(#daveEhDev)
+Esta task pode ser utilizada quando quisermos remover espaços desnecessários dos
+arquivos HTML, e preservando espaços úteis como nas tags <pre> e comentários condicionais.
+
+__Instalação:__
+
+```bash
+$ npm install grunt-contrib-htmlmin --save-dev
+```
+
+__Configuração da task:__
+
+```javascript
+grunt.initConfig({
+  htmlmin: {
+    dist: {
+      options: {
+        removeComments: true,
+        collapseWhitespace: true
+      },
+      files: [
+        {
+          expand: true,
+          cwd: 'src',
+          src: ['*.html'],
+          dest: 'build/'},
+      ]
+    }
+  }
+});
+
+grunt.loadNpmTasks('grunt-contrib-htmlmin');
+```
+
+#### 5.7.1 Reconfig da task copy
+
+Queremos evitar que o arquivo __index.html__ seja copiado para dentro de __build/__.
+
+```javascript
+copy: {
+  // ...
+  // src: ['**/*'],
+     src: ['**/*', '!styles/*.less', '!*.html'],
+  // ...
+});
+```
+
+#### 5.7.2 Reconfig da task watch
+
+```javascript
+watch: {
+  // ...
+  // tasks: ['copy']
+     tasks: ['newer:copy', 'newer:less', 'newer:htmlmin']
+  // ...
+}
+```
+
+Mais detalhes em: [grunt-contrib-htmlmin](https://github.com/gruntjs/grunt-contrib-htmlmin).
 
 ### grunt-imagemin
 
