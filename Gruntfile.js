@@ -58,6 +58,18 @@ module.exports = function(grunt) {
           logConcurrentOutput: true
         }
       }
+    },
+
+    htmlmin: {
+      dist: {
+        options: {
+          removeComments: true,
+          collapseWhitespace: true
+        },
+        files: {
+          'build/index.html': 'src/index.html'
+        }
+      }
     }
   });
 
@@ -69,4 +81,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-newer');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-concurrent');
+  grunt.loadNpmTasks('grunt-contrib-htmlmin');
 };
