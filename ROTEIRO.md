@@ -519,7 +519,7 @@ Mais detalhes em: [grunt-contrib-jshint](https://github.com/gruntjs/grunt-contri
 
 ### 5.13 load-grunt-tasks
 
-Para evitar fazer um  __loadNpmTasks__ para cada task que pretende utilizar.
+Para evitar fazer um  __loadNpmTasks__ para cada task que você pretende utilizar.
 
 __Instalação:__
 
@@ -528,6 +528,10 @@ $ npm install load-grunt-tasks --save-dev
 ```
 
 __Para logar o output das tasks no terminal:__
+
+#### 5.13.1 Reconfig da task copy
+
+Queremos evitar que seja necessário adicionar o carregamento das task, uma a uma.
 
 ```javascript
 module.exports = function(grunt) {
@@ -549,6 +553,7 @@ module.exports = function(grunt) {
 
   require('load-grunt-tasks')(grunt);
 };
+```
 
 Mais detalhes em: [load-grunt-tasks](https://github.com/sindresorhus/load-grunt-tasks).
 
