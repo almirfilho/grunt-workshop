@@ -555,7 +555,7 @@ module.exports = function(grunt) {
 
 Mais detalhes em: [load-grunt-tasks](https://github.com/sindresorhus/load-grunt-tasks).
 
-### load-grunt-config
+### 5.14 load-grunt-config
 
 Ajuda organizar o __Gruntfile__ possibilitando reduzir para arquivos separados.
 
@@ -566,3 +566,26 @@ $ npm install load-grunt-config --save-dev
 ```
 
 Mais exemplo em: [grunt-workflow](https://github.com/davidsonfellipe/grunt-workflow).
+
+### 5.15 time-grunt
+
+Loga no terminal o tempo gasto em cada task que foi utilizada.
+
+```bash
+$ npm install time-grunt--save-dev
+```
+
+__Configuração da task:__
+
+```javascript
+module.exports = function(grunt) {
+
+  require('time-grunt')(grunt);
+
+  grunt.initConfig({
+  //....
+  });
+};
+```
+
+Mais detalhes em: [time-grunt](https://github.com/sindresorhus/time-grunt).
