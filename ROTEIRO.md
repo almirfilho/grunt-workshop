@@ -474,8 +474,50 @@ Mais detalhes em: [grunt-concurrent](https://github.com/sindresorhus/grunt-concu
 
 ### load-grunt-tasks
 
-(#daveEhDev)
+Para evitar fazer um  __loadNpmTasks__ para cada task que pretende utilizar.
+
+__Instalação:__
+
+```bash
+$ npm install load-grunt-tasks --save-dev
+```
+
+__Para logar o output das tasks no terminal:__
+
+```javascript
+module.exports = function(grunt) {
+
+  grunt.initConfig({
+  ...
+  });
+
+  //grunt.loadNpmTasks('grunt-contrib-copy');
+  //grunt.loadNpmTasks('grunt-contrib-watch');
+  //grunt.loadNpmTasks('grunt-contrib-less');
+  //grunt.loadNpmTasks('grunt-contrib-concat');
+  //grunt.loadNpmTasks('grunt-contrib-uglify');
+  //grunt.loadNpmTasks('grunt-newer');
+  //grunt.loadNpmTasks('grunt-contrib-connect');
+  //grunt.loadNpmTasks('grunt-concurrent');
+  //grunt.loadNpmTasks('grunt-contrib-htmlmin');
+  //grunt.loadNpmTasks('grunt-contrib-imagemin');
+
+  require('load-grunt-tasks')(grunt);
+};
+
+Mais detalhes em: [load-grunt-tasks](https://github.com/sindresorhus/load-grunt-tasks).
 
 ### load-grunt-config
 
-(#daveEhDev)
+Ajuda organizar o __Gruntfile__ possibilitando reduzir para arquivos separados.
+
+__Instalação:__
+
+```bash
+$ npm install load-grunt-config --save-dev
+```
+
+Mais exemplo em: [grunt-workflow](https://github.com/davidsonfellipe/grunt-workflow).
+
+
+npm install load-grunt-config
