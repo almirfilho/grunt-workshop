@@ -465,7 +465,7 @@ Mais detalhes em: [grunt-concurrent](https://github.com/sindresorhus/grunt-concu
 
 ### 5.11 grunt-csslint
 
-Quando desejamos realizar uma verificação baseada nas regras do csslint, para
+Quando desejamos realizar uma verificação baseada nas regras do [csslint](http://csslint.net/), para
 esse exemplo optamos por disponibilizar uma forma de personalizar as regras que
 deseja, via .csslintrc.
 
