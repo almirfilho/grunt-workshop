@@ -566,6 +566,3 @@ $ npm install load-grunt-config --save-dev
 ```
 
 Mais exemplo em: [grunt-workflow](https://github.com/davidsonfellipe/grunt-workflow).
-
-
-npm install load-grunt-config
