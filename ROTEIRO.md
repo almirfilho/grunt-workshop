@@ -367,7 +367,7 @@ grunt.initConfig({
 grunt.loadNpmTasks('grunt-contrib-imagemin');
 ```
 
-#### 5.7.1 Reconfig da task copy
+#### 5.8.1 Reconfig da task copy
 
 Queremos evitar que __imagens__ sejam copiadas para dentro de __build/__.
 
@@ -380,7 +380,7 @@ copy: {
 });
 ```
 
-#### 5.7.2 Reconfig da task watch
+#### 5.8.2 Reconfig da task watch
 
 ```javascript
 watch: {
@@ -393,7 +393,7 @@ watch: {
 
 Mais detalhes em: [grunt-contrib-imagemin](https://github.com/gruntjs/grunt-contrib-imagemin).
 
-### grunt-contrib-connect
+### 5.9 grunt-contrib-connect
 
 Agora queremos que nossa aplicação rode em num servidor HTTP local.
 
@@ -424,7 +424,7 @@ grunt.loadNpmTasks('grunt-contrib-connect');
 Mais detalhes em: [grunt-contrib-connect](https://github.com/gruntjs/grunt-contrib-connect).
 
 
-### grunt-concurrent
+### 5.10 grunt-concurrent
 
 Queremos __servir__ nossa aplicação enquanto rodamos a task __watch__.
 Podemos utilizar este plug-in para rodar tasks em paralelo.
@@ -464,15 +464,62 @@ grunt.initConfig({
 Mais detalhes em: [grunt-concurrent](https://github.com/sindresorhus/grunt-concurrent).
 
 
-### grunt-csslint
+### 5.11 grunt-csslint
 
-(#almirOdev)
+Quando desejamos realizar uma verificação baseada nas regras do csslint, para
+esse exemplo optamos por disponibilizar uma forma de personalizar as regras que
+deseja, via .csslintrc.
 
-### grunt-jshint
+__Instalação:__
 
-(#almirOdev)
+```bash
+$ npm install grunt-contrib-csslint --save-dev
+```
 
-### load-grunt-tasks
+__Configuração da task:__
+
+```javascript
+grunt.initConfig({
+  csslint: {
+    options: {
+      csslintrc: '.csslintrc'
+    },
+    src: ['build/styles/*.css']
+  }
+});
+
+grunt.loadNpmTasks('grunt-contrib-csslint');
+```
+
+Mais detalhes em: [grunt-contrib-csslint](https://github.com/gruntjs/grunt-contrib-csslint).
+
+
+### 5.12 grunt-jshint
+
+
+```bash
+$ npm install grunt-contrib-jshint --save-dev
+```
+
+__Configuração da task:__
+
+```javascript
+grunt.initConfig({
+  jshint: {
+    options: {
+      jshintrc: '.jshintrc'
+    },
+    all: ['<%= path.src %>js/*.js']
+  }
+});
+
+grunt.loadNpmTasks('grunt-contrib-jshint');
+```
+
+Mais detalhes em: [grunt-contrib-jshint](https://github.com/gruntjs/grunt-contrib-jshint).
+
+
+### 5.13 load-grunt-tasks
 
 Para evitar fazer um  __loadNpmTasks__ para cada task que pretende utilizar.
 
@@ -488,7 +535,7 @@ __Para logar o output das tasks no terminal:__
 module.exports = function(grunt) {
 
   grunt.initConfig({
-  ...
+  //...
   });
 
   //grunt.loadNpmTasks('grunt-contrib-copy');
