@@ -527,8 +527,6 @@ __Instalação:__
 $ npm install load-grunt-tasks --save-dev
 ```
 
-__Para logar o output das tasks no terminal:__
-
 #### 5.13.1 Reconfig da task copy
 
 Queremos evitar que seja necessário adicionar o carregamento das task, uma a uma.
