@@ -88,6 +88,20 @@ module.exports = function(grunt) {
           dest: 'build/images'
         }]
       }
+    },
+
+    csslint: {
+      options: {
+        csslintrc: '.csslintrc'
+      },
+      src: ['build/styles/*.css']
+    },
+
+    jshint: {
+      options: {
+        jshintrc: '.jshintrc'
+      },
+      all: ['src/scripts/*.js']
     }
 
   });
