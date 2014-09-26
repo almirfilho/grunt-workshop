@@ -424,7 +424,7 @@ Mais detalhes em: [grunt-contrib-connect](https://github.com/gruntjs/grunt-contr
 
 ### 5.10 grunt-concurrent
 
-Queremos __servir__ nossa aplicação enquanto rodamos a task __watch__.
+É utilizado quando queremos __servir__ nossa aplicação enquanto rodamos a task __watch__.
 Podemos utilizar este plug-in para rodar tasks em paralelo.
 
 __Instalação:__
@@ -458,6 +458,7 @@ grunt.initConfig({
     }
   }
 });
+```
 
 Mais detalhes em: [grunt-concurrent](https://github.com/sindresorhus/grunt-concurrent).
 
