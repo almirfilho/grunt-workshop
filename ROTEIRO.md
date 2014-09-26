@@ -360,8 +360,6 @@ grunt.initConfig({
       }]
     }
   }
-};
-
 });
 
 grunt.loadNpmTasks('grunt-contrib-imagemin');
