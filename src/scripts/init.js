@@ -6,6 +6,4 @@
 
   var teste = new GruntWorkshopBigNamedClass();
 
-  teste.init();
-
 })();
