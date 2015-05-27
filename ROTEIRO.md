@@ -151,7 +151,7 @@ grunt.initConfig({
         compress: true
       },
       files: {
-        'build/styles/custom.css': ['src/styles/custom.less']
+        'build/styles/custom.min.css': ['src/styles/custom.less']
       }
     }
   }
@@ -170,7 +170,7 @@ Queremos evitar que o arquivo __custom.less__ seja copiado para dentro de __buil
 copy: {
   // ...
   // src: ['**/*'],
-     src: ['**/*', '!styles/*.less'],
+     src: ['**/*', '!**/*.less'],
   // ...
 });
 ```
@@ -270,11 +270,36 @@ grunt.loadNpmTasks('grunt-contrib-uglify');
 
 Mais detalhes em: [grunt-contrib-uglify](https://github.com/gruntjs/grunt-contrib-uglify).
 
+#### 5.6.1 Reconfig da task copy
+
+Queremos evitar que os arquivos __class.js__ e __init.js__ sejam copiados para
+dentro de __build/scripts/__.
+
+```javascript
+copy: {
+  // ...
+  // src: ['**/*', '!**/*.less'],
+     src: ['**/*', '!**/*.less', '!**/*.js'],
+  // ...
+});
+```
+
+#### 5.6.2 Reconfig da task watch
+
+```javascript
+watch: {
+  // ...
+  // tasks: ['newer:copy', 'newer:less']
+     tasks: ['newer:copy', 'newer:less', 'newer:uglify']
+  // ...
+}
+```
 
 ### 5.7 grunt-htmlmin
 
 Esta task é utilizada quando queremos remover espaços desnecessários dos
-arquivos HTML, e preservar espaços úteis, como nas tags &lt;pre&gt; e comentários condicionais.
+arquivos HTML, e preservar espaços úteis, como nas tags &lt;pre&gt; e comentários
+condicionais.
 
 __Instalação:__
 
@@ -296,7 +321,7 @@ grunt.initConfig({
         {
           expand: true,
           cwd: 'src',
-          src: ['*.html'],
+          src: ['**/*.html'],
           dest: 'build/'},
       ]
     }
@@ -313,8 +338,8 @@ Queremos evitar que o arquivo __index.html__ seja copiado para dentro de __build
 ```javascript
 copy: {
   // ...
-  // src: ['**/*'],
-     src: ['**/*', '!styles/*.less', '!*.html'],
+  // src: ['**/*', '!**/*.less', '!**/*.js'],
+     src: ['**/*', '!**/*.less', '!**/*.js', '!**/*.html'],
   // ...
 });
 ```
@@ -324,8 +349,8 @@ copy: {
 ```javascript
 watch: {
   // ...
-  // tasks: ['copy']
-     tasks: ['newer:copy', 'newer:less', 'newer:htmlmin']
+  // tasks: ['newer:copy', 'newer:less', 'newer:uglify']
+     tasks: ['newer:copy', 'newer:less', 'newer:uglify', 'newer:htmlmin']
   // ...
 }
 ```
